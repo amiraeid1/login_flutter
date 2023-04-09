@@ -1,36 +1,32 @@
 import 'package:flutter/material.dart';
-
-import 'screen.dart';
+import 'my widget.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyWidget());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyWidget());
+    return MaterialApp(home: MyWidget2());
   }
 }
 
-class nextpage extends StatelessWidget {
-  const nextpage({super.key});
+class nweone extends StatelessWidget {
+  const nweone({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("hello"),
+        title: const Text("next page"),
         leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back)),
-      ),
-      body: const Center(
-        child: Text("we are in page 2"),
       ),
     );
   }
